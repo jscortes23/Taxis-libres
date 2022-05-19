@@ -1,0 +1,114 @@
+/* ------------------------ */
+/* Reset                    */
+/* ------------------------ */
+
+/* Box sizing */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+/* Reset margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0;
+}
+
+/* Set up the body */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 62.5%;
+    line-height: 1.5rem;
+    min-height: 100vh;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Make from element easier to work with */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove defualt style from unordered list */
+ul {
+    margin: 0;
+    list-style: none;
+}
+
+/* Remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::after,
+    *::before {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ------------------------ */
+/* Gobal variables          */
+/* ------------------------ */
+
+:root {
+    --font-color: #FFFFFF;
+    --primary-color: #000000;
+    --secondary-color: #C3DC00;
+    --x-lg: 4.5rem;
+    --lg: 1.8rem;
+    --md: 1.6rem;
+    --sm: 1.4rem;
+}
+
+/* ------------------------ */
+/* Section Header           */
+/* ------------------------ */
+
+header {
+    width: 100%;
+    height: auto;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--primary-color);
+}
+
+.logo img {
+    width: 200px;
+    height: 60px;
+    object-fit: contain;
+    object-position: center;
+}
+
+header .btn-menu {
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.btn-menu img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    object-position: center;
+}
