@@ -37,6 +37,12 @@ picture {
     display: block;
 }
 
+/* Make anchor easier to work with */
+a {
+    font: inherit;
+    text-decoration: none;
+}
+
 /* Make from element easier to work with */
 input,
 button,
@@ -68,23 +74,71 @@ ul {
 /* ------------------------ */
 
 :root {
+    /* Palettes color */
     --font-color: #FFFFFF;
     --primary-color: #000000;
     --secondary-color: #C3DC00;
+
+    /* Body font size */
     --x-lg: 4.5rem;
     --lg: 1.8rem;
     --md: 1.6rem;
     --sm: 1.4rem;
+
+    /* Arrow color */
+    --arrow-color: #FFFFFF;
+
+    /* Buttons font size & color */
+    --btn-font-size: 1.3rem;
+    --btn-text-color: #000000;
 }
 
 /* ------------------------ */
-/* Section Header           */
+/* Buttons                  */
+/* ------------------------ */
+
+.btn {
+    width: 44px;
+    height: 44px;
+    font-size: var(--btn-font-size);
+    line-height: 2rem;
+    font-weight: 600;
+    color: var(--btn-text-color);
+    border: none;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.btn-primary {
+    padding: 18px 32px;
+    border-radius: 12px;
+}
+
+.btn-secondary {
+    
+}
+
+.arrow__left::after {
+    content: '\1F808';
+    color: var(--arrow-color);
+}
+
+.arrow__right::after {
+    content: '\1F80A';
+    color: var(--arrow-color);
+}
+
+/* ------------------------ */
+/* Section header           */
 /* ------------------------ */
 
 header {
     width: 100%;
     height: auto;
     padding: 8px;
+    position: sticky;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -98,17 +152,24 @@ header {
     object-position: center;
 }
 
-header .btn-menu {
-    height: 44px;
-    border: none;
-    border-radius: 50%;
-    background-color: var(--secondary-color);
-    cursor: pointer;
+.btn-menu img {
+    width: 26px;
+    margin: 0 auto;
+    object-fit: contain;
 }
 
-.btn-menu img {
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
-    object-position: center;
+/* ------------------------ */
+/* Section banner slider    */
+/* ------------------------ */
+
+main {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+main .container-banner {
+    width: 100%;
+    height: 300px;
+    background-color: aqua;
 }
